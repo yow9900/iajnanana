@@ -4,7 +4,7 @@ import telebot
 
 # ===== CONFIG =====
 TOKEN = os.environ.get("BOT_TOKEN", "7770743573:AAHs8k5Axhr4XhdWmlLdMYTmOUhYZ2-obG4")
-WEBHOOK_URL = os.environ.get("WEBHOOK_URL", "unsightly-calypso-wwmahe-3b4fd43d.koyeb.app/")  # HTTPS URL
+WEBHOOK_URL = os.environ.get("WEBHOOK_URL", "https://iajnanana.onrender.com")  # HTTPS URL
 MEDIA_TO_TEXT_BOT = "https://t.me/MediaToTextBot"
 
 bot = telebot.TeleBot(TOKEN, threaded=False)
