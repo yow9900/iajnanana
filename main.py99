@@ -328,7 +328,7 @@ def attach_action_buttons(bot_obj,chat_id,message_id,text):
     try:
         include_summarize = len(text)>1000 if text else False
         m=InlineKeyboardMarkup()
-        m.add(InlineKeyboardButton("⭐️Clean transcript",callback_data=f"clean_up|{chat_id}|{message_id}"))
+        #m.add(InlineKeyboardButton("⭐️Clean transcript",callback_data=f"clean_up|{chat_id}|{message_id}"))
         if include_summarize: m.add(InlineKeyboardButton("Get Summarize",callback_data=f"get_key_points|{chat_id}|{message_id}"))
         try: bot_obj.edit_message_reply_markup(chat_id,message_id,reply_markup=m)
         except: pass
@@ -350,7 +350,7 @@ def process_media_file(message,bot_obj,bot_token,bot_index,file_id,file_size,fil
         return
 
     # === FARIINTA XAYAYSIISKA EE CUSUB HADDAY TAHAY HALKAN AYAY KA BILAAJMaysaa ===
-    migration_message = "🚀 Switch to the New Bot Now: https://t.me/MediaToTextBot\n\n✨ Why should I use the new bot, and what makes it better than this one?\n • ⚡ Lightning-fast transcription\n • 🎯 High accuracy\n • 📁 Upload files up to 2GB"
+    migration_message = "🚀 Switch to the New Bot Now: https://t.me/MediaToTextBot\n\n✨ Why should I use the new bot, and what makes it better than this?\n • ⚡ Lightning-fast transcription\n • 🎯 High accuracy\n • 📁 Upload files up to 2GB \n • More features like Cleaning up the text "
     bot_obj.send_message(message.chat.id, migration_message, reply_to_message_id=message.message_id)
     # === FARIINTA XAYAYSIISKA EE CUSUB HADDAY TAHAY HALKAN AYAY KU DHAMAADAYSAA ===
 
