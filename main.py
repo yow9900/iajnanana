@@ -7,7 +7,7 @@ from yt_dlp import YoutubeDL
 from flask import Flask
 import threading
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+BOT_TOKEN = os.environ.get("8409832972:AAGLcBs7q6PwtxZDGpB-3SCNgTwzfPKPUVw")
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode=None)
 
 app = Flask(__name__)
