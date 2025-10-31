@@ -358,7 +358,7 @@ async def handle_link(client, message: Message):
         return
     if any(d in text.lower() for d in ["http://", "https://"]):
         if not any(domain in text.lower() for domain in SUPPORTED_DOMAINS):
-            await message.reply("Hubi inuu link ga sax yahay ama Public 😉")
+            await message.reply("Hubi inuu link ga sax yahay 😉")
             return
         u = user_record(user_id)
         if u.get("blocked"):
@@ -378,7 +378,7 @@ async def handle_link(client, message: Message):
             else:
                 await queue.put((client, message, text))
     else:
-        await message.reply("Fadlan soo dir link ama amarka saxda ah.")
+        await message.reply("Fadlan soo dir link muuqaal 😤")
 
 @flask_app.route("/", methods=["GET", "POST", "HEAD"])
 def keep_alive():
